@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="main">
+        <div class="div-main">
+            <section class="tipo section">
+                <div class="active">
+                    <h1>Elige el nivel de complejidad</h1>
+                    <div class="opciones-1">
+                        <button id="t1" type="button" onclick="select()" value="" class="botones b-1 ir">
+                            Simple
+                        </button>
+                        <button id="t2" type="button" onclick="select()" value="" class="botones b-1 ir">
+                            Promedio
+                        </button>
+                        <button id="t3" type="button" onclick="select()" value="" class="botones b-1 ir">
+                            Complejo
+                        </button>
+                    </div>
+                    <div class="help">
+                        <p>¿No sabes el nivel de complejidad?</p>
+                    </div>
+                </div>
+            </section>
+                
+            <section class="datos section">
+                <div class="active">
+                    <h1>Paso 2</h1>
+                    <table class="ta">
+                        <tr>
+                            <th>Valor dominio</th>
+                            <th>Conteo</th>
+                        </tr>
+                        <tr>
+                            <td>Entradas extrenas (EE)</td>
+                            <td><input class="int" type="number" name="" value="0" id="in1" min="0" oninput="saved()"></td>
+                        </tr>
+                        <tr>
+                            <td>Salidas externas (SE)</td>
+                            <td><input class="int" type="number" name="" value="0" id="in2" min="0" oninput="saved()"></td>
+                        </tr>
+                        <tr>
+                            <td>Consultas externas (CE)</td>
+                            <td><input class="int" type="number" name="" value="0" id="in3" min="0" oninput="saved()"></td>
+                        </tr>
+                        <tr>
+                            <td>Archivos logicos internos (ALI)</td>
+                            <td><input class="int" type="number" name="" value="0" id="in4" min="0" oninput="saved()"></td>
+                        </tr>
+                        <tr>
+                            <td>Archivos de interfaaz externos (AIE)</td>
+                            <td><input class="int" type="number" name="" value="0" id="in5" min="0" oninput="saved()"></td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td><div id="result"></div></td>
+                        </tr>
+                    </table>
+                    <p id="error"></p>
+                    <div class="bot-s">
+                        <button id="fins" type="button" value="" class="botones fim">
+                            Volver
+                        </button>
+                        <button id="sig1" type="button" value="" class="botones ir">
+                            Siguiente
+                        </button>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <section class="preguntas section">
+                <div class="active">
+                    <h1>Paso 3: Factores de ajuste de valor</h1>
+                    <div class="cont-slider-s">
+                        <div class="c-slider">
+                            <div class="cus cuestionario-1">
+                                <div class="pregunta">
+                                    <label for="valor1">1 Valor:</label>
+                                    <select id="valor1" name="valor1">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="pregunta">
+                                    <label for="valor2">2 Valor:</label>
+                                    <select id="valor2" name="valor2">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="pregunta">
+                                    <label for="valor3">3 Valor:</label>
+                                    <select id="valor3" name="valor3">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="pregunta">
+                                    <label for="valor4">4 Valor:</label>
+                                    <select id="valor4" name="valor4">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="pregunta">
+                                    <label for="valor5">5 Valor:</label>
+                                    <select id="valor5" name="valor5">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="pregunta">
+                                    <label for="valor6">6 Valor:</label>
+                                    <select id="valor6" name="valor6">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="pregunta">
+                                    <label for="valor7">7 Valor:</label>
+                                    <select id="valor7" name="valor7">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="bot-s">
+                                    <button type="button" value="" class="botones volver">
+                                        Volver
+                                    </button>
+                                    <button id="sig" type="button" value="" class="botones">
+                                        Siguiente
+                                    </button>
+                                </div>
+                            
+                            </div>
+                            <div class="cus cuestionario-2">
+                                <div class="pregunta">
+                                    <label for="valor8">8 Valor:</label>
+                                    <select id="valor8" name="valor8">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="pregunta">
+                                    <label for="valor9">9 Valor:</label>
+                                    <select id="valor9" name="valor9">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="pregunta">
+                                    <label for="valor10">10 Valor:</label>
+                                    <select id="valor10" name="valor10">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="pregunta">
+                                    <label for="valor11">11 Valor:</label>
+                                    <select id="valor11" name="valor11">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="pregunta">
+                                    <label for="valor12">12 Valor:</label>
+                                    <select id="valor12" name="valor12">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="pregunta">
+                                    <label for="valor13">13 Valor:</label>
+                                    <select id="valor13" name="valor13">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="pregunta">
+                                    <label for="valor14">14 Valor:</label>
+                                    <select id="valor14" name="valor14">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="bot-s">
+                                    <button id="atr" type="button" value="" class="botones">
+                                        Volver
+                                    </button>
+                                    <button type="button" value="" class="botones ir">
+                                        Siguiente
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="personas section">
+                <div class="active">
+                    <h1>Numero de miembros para el proyecto</h1>
+                    <div class="errores">
+                        <p id="error404"></p>
+                        <input class="int" oninput="saved2()" type="number" min="0" name="" id="nump">
+                    </div>
+                    <div class="bot-s">
+                        <button type="button" value="" class="botones volver">
+                            Volver
+                        </button>
+                        <button id="fin" onclick="calcular()" type="button" value="" class="botones ir">
+                            Siguiente
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="resultado section">
+                <div class="active">
+                    <h1>Resultado</h1>
+                    <div class="resultados-a">
+                        <div class="caja">
+                            <h2>Resultado Conteo</h2>
+                            <p id="paso-1"></p>
+                        </div>
+                        <div class="caja">
+                            <h2>Resultado Pregnutas</h2>
+                            <p id="paso-2"></p>
+                        </div>
+                        <div class="caja">
+                            <h2>Resultado final</h2>
+                            <p id="final"></p>
+                        </div>
+                    </div>
+                    <div class="resultados-a">
+                        <h2>Posible clasificación</h2>
+                        <p id="clasifi"></p>
+                        <h2>Esfuerzo de personas por horas</h2>
+                        <p id="persona"></p>
+                    </div>
+                    <div class="bot-s">
+                        <button id="fin0" type="button" onclick="replayed()" value="" class="botones fim">
+                            Terminar
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
